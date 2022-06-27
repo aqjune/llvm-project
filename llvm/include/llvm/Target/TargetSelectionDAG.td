@@ -453,6 +453,7 @@ def anyext     : SDNode<"ISD::ANY_EXTEND" , SDTIntExtendOp>;
 def trunc      : SDNode<"ISD::TRUNCATE"   , SDTIntTruncOp>;
 def bitconvert : SDNode<"ISD::BITCAST"    , SDTUnaryOp>;
 def addrspacecast : SDNode<"ISD::ADDRSPACECAST", SDTUnaryOp>;
+def freeze     : SDNode<"ISD::FREEZE"     , SDTUnaryOp>;
 def extractelt : SDNode<"ISD::EXTRACT_VECTOR_ELT", SDTVecExtract>;
 def insertelt  : SDNode<"ISD::INSERT_VECTOR_ELT", SDTVecInsert>;
 

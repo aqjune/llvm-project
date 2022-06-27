@@ -70,6 +70,9 @@ multiclass subvector_subreg_lowering<RegisterClass subRC, ValueType subVT,
 
   def : Pat<(VT (insert_subvector undef, subRC:$src, (iPTR 0))),
             (VT (INSERT_SUBREG (IMPLICIT_DEF), subRC:$src, subIdx))>;
+
+  def : Pat<(VT (insert_subvector (freeze undef), subRC:$src, (iPTR 0))),
+            (VT (INSERT_SUBREG (IMPLICIT_DEF), subRC:$src, subIdx))>;
 }
 
 // A 128-bit subvector extract from the first 256-bit vector position is a
